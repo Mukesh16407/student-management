@@ -15,9 +15,10 @@ import { useNavigate } from "react-router-dom";
 
 const theme = createTheme();
 
-export const SignupForm = () => {
+export const SignupForm = ({ signupgoogle }) => {
+
     const navigate = useNavigate();
-  const handleSubmit = () => {};
+    const handleSubmit = () => {};
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -110,6 +111,7 @@ export const SignupForm = () => {
                     variant="text"
                     sx={{ mt: 0, mb: 2 }}
                     style={{ fontSize: "13px" }}
+                    onClick={() => { signupgoogle() }}
                   >
                     Sign up with google
                   </Button>
